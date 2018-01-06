@@ -1,0 +1,23 @@
+<!-- Form to query a MySQL DB -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sample DB query</title>
+	</head>
+
+	<body>
+		<h1>Querying a MySQL database</h1>
+		<form method="post" action="database.php">
+			<p>Select field to display:
+				<select name = "select">
+					<option selected>*</option>
+					<option>ID</option>
+				</select>
+			</p>
+
+			<p>
+				<input type="submit" value="Send Query">
+			</p>
+		</form>
+	</body>
+</html>

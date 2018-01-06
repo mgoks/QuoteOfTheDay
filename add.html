@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!-- ADD PAGE
+HTML form for gathering quote data -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Add your favourite quote</title>
+		<link rel="stylesheet" type="text/css" href="add.css">
+	</head>
+
+	<style>
+		body{
+			background-image: url(http://marketingland.com/wp-content/ml-loads/2014/08/books-library-legal-ss-1920.jpg);
+			background-size: 50%;
+		}
+		textarea{
+			width: 100%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    font-size: 100%;
+		}
+		input[type=text], select {
+		    width: 100%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    font-size: 100%;
+		}
+		input[name=image]{
+			font-size: 75%;
+		}
+		input[type=number], select{
+			width: 100%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    font-size: 100%;
+		}
+		input[type=submit] {
+		    width: 100%;
+		    background-color: grey;
+		    color: white;
+		    padding: 14px 20px;
+		    margin: 8px 0;
+		    border: none;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    font-size: 100%;
+		}
+		input[type=submit]:hover {
+		    background-color: black;
+		}
+		div, h1, h2, h3{
+		    border-radius: 5px;
+		    background-color: #f2f2f2;
+		    padding: 20px;
+		    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		}
+	</style>
+
+	<body>
+		<div>
+			<h2>Please fill the form below to add a quote of your choice.</h2>
+			<h3>Try to fill as many fields as possible</h3>
+
+			<!-- post form data to add.php -->
+			<label for="quote">Quote</label>
+			<textarea rows="10" cols="50" name="quote" form="addform" id="quote" placeholder="Enter quote here..."></textarea>
+
+			<form action="add.php" method="POST" id="addform">
+				
+				<label for="by">By</label>
+				<input type="text" size="50" id="by" name="by" placeholder="Whom was this quote said or written by?"><br/>
+
+				<label for="year">Year</label>
+				<input type="number" size="10" name="year" id="year" placeholder="In what year was this quote written or said?">	<br/>
+				
+				<label for="from">From</label>
+				<input type="text" size="50" width="50"	name="from" id="from" placeholder="E.g. from his book 'Twilight of Idols'"><br/>
+				
+				<label for="image">Image link</label>
+				<input type="text" size="50" width="50"	name="image" id="image" placeholder="You can use Google to find an image link. Just right-click on an image and select 'Copy image link'."><br/><br/>
+				
+				<input type="submit" value="Submit">
+			</form>
+
+		</div>
+		
+	</body>
+
+</html>
